@@ -29,7 +29,7 @@ spec:
       http:
         paths:
           {{- range .paths }}
-          - path: {{ .path }}
+          - path: {{ .path | quote }}
             {{- with .pathType }}
             pathType: {{ . }}
             {{- end }}
